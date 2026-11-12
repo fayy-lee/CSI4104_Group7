@@ -255,8 +255,8 @@ Developed by:
 -   Sanika Sisodia
 -   Fay Lee
 
-**University of Ottawa**\
-CSI4104 -- Software Engineering Project
+**University of Ottawa**
+CSI4104 - VR Project
 
 ## Future Improvements
 
