@@ -116,13 +116,13 @@ The demonstration covers:
 
 ## Technologies Used
 
-  Technology        Purpose
-  ----------------- ---------------------------------------------
-  Unity             3D environment and application development
-  C#                Application logic and interaction scripts
-  Unity UI System   Menus, instructions, and interface elements
-  Git               Version control
-  GitHub            Source code management and collaboration
+| Technology | Purpose |
+|---|---|
+| Unity | 3D environment and application development |
+| C# | Application logic and interaction scripts |
+| Unity UI System | Menus, instructions, and interface elements |
+| Git | Version control |
+| GitHub | Source code management and collaboration |
 
 ## Getting Started
 
@@ -175,16 +175,16 @@ To run the application without opening the Unity Editor:
 
 ## Controls
 
-  Input   Action
-  ------- ---------------------------------------------
-  W       Move forward
-  A       Move left
-  S       Move backward
-  D       Move right
-  Mouse   Look around
-  E       Interact with objects and activity stations
-  Space   Advance through guided exercise steps
-  Esc     Close activity panels or unlock the cursor
+| Input | Action |
+|---|---|
+| W | Move forward |
+| A | Move left |
+| S | Move backward |
+| D | Move right |
+| Mouse | Look around |
+| E | Interact with objects and activity stations |
+| Space | Advance through guided exercise steps |
+| Esc | Close activity panels or unlock the cursor |
 
 ## Project Structure
 
