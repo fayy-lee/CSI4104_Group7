@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Target
+  - ExerciseStation
+  - ResourceStation
+  - EverydayObject
+  - ReachPlaceZone
+  - EverydayPlaceZone
   layers:
   - Default
   - TransparentFX

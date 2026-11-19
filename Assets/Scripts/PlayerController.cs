@@ -1,21 +1,40 @@
 
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float mouseSensitivity = 2f;
 
     private CharacterController controller;
     private Transform playerCamera;
+
     private float verticalRotation = 0f;
     private float gravity = -9.81f;
     private float verticalVelocity = 0f;
+    private bool isPaused;
+    private XRInteractionSimulator interactionSimulator;
+    private bool simulatorPointAndClickBeforePause;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        playerCamera = GetComponentInChildren<Camera>().transform;
+        interactionSimulator = FindAnyObjectByType<XRInteractionSimulator>();
+
+        Camera cameraComponent = GetComponentInChildren<Camera>();
+
+        if (cameraComponent == null)
+        {
+            Debug.LogError("PlayerController: No child camera found.");
+            enabled = false;
+            return;
+        }
+
+        playerCamera = cameraComponent.transform;
+        Time.timeScale = 1f;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -23,19 +42,29 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Mouse look
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        if (isPaused || controller == null || playerCamera == null)
+            return;
 
-        transform.Rotate(Vector3.up * mouseX);
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            bool unlockCursor = Cursor.lockState == CursorLockMode.Locked;
+            Cursor.lockState = unlockCursor ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.visible = unlockCursor;
+        }
 
-        verticalRotation -= mouseY;
-        verticalRotation = Mathf.Clamp(verticalRotation, -80f, 80f);
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-        playerCamera.localRotation =
-            Quaternion.Euler(verticalRotation, 0f, 0f);
+            transform.Rotate(Vector3.up * mouseX);
 
-        // WASD movement
+            verticalRotation -= mouseY;
+            verticalRotation = Mathf.Clamp(verticalRotation, -80f, 80f);
+
+            playerCamera.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -57,11 +86,28 @@ public class PlayerController : MonoBehaviour
             Vector3.up * verticalVelocity * Time.deltaTime
         );
 
-        // Release mouse cursor
-        if (Input.GetKeyDown(KeyCode.Escape))
+    }
+
+    public void SetPaused(bool paused)
+    {
+        if (interactionSimulator != null)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            if (paused && !isPaused)
+            {
+                simulatorPointAndClickBeforePause = interactionSimulator.usePointAndClick;
+                interactionSimulator.usePointAndClick = false;
+            }
+            else if (!paused && isPaused)
+            {
+                interactionSimulator.usePointAndClick = simulatorPointAndClickBeforePause;
+            }
         }
+
+        isPaused = paused;
+        if (!paused)
+            Time.timeScale = 1f;
+
+        Cursor.lockState = paused ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = paused;
     }
 }

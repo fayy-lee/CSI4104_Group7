@@ -1,17 +1,16 @@
-# RehabVR: Accessible Stroke Rehabilitation
+# ACT-FAST: Accessible Care and Training for Stroke Rehabilitation
 
-RehabVR is an interactive rehabilitation prototype developed using Unity
-and C#. The project explores how an accessible, interactive digital
-environment can support rehabilitation through guided activities,
-progress tracking, and educational resources.
+ACT-FAST is an academic Unity prototype exploring an accessible desktop
+3D environment with optional guided activities, progress feedback, and
+general educational resources.
 
-Users can navigate a 3D rehabilitation room, complete interactive
-activities, follow guided arm exercises, and access educational
-information.
+Users can explore four activity stations, move and place familiar
+objects, follow self-paced movement instructions, and browse learning
+content.
 
-> **Note:** Due to project development constraints, RehabVR is
-> implemented as a desktop-based 3D prototype rather than a
-> headset-based virtual reality application.
+> **Note:** The demonstration runs in desktop Play Mode and does not
+> require a VR headset. It is an educational prototype, not a clinical
+> rehabilitation product or personalized medical treatment.
 
 ## Table of Contents
 
@@ -171,7 +170,7 @@ To run the application without opening the Unity Editor:
     -   `RehabilitationRoom`
 5.  Select **Build**.
 6.  Choose an output directory.
-7.  Open the generated executable to launch RehabVR.
+7.  Open the generated executable to launch ACT-FAST.
 
 ## Controls
 
@@ -181,10 +180,13 @@ To run the application without opening the Unity Editor:
 | A | Move left |
 | S | Move backward |
 | D | Move right |
-| Mouse | Look around |
+| Mouse (locked) | Look around |
+| Tab | Toggle pointer lock for menu interaction |
 | E | Interact with objects and activity stations |
-| Space | Advance through guided exercise steps |
-| Esc | Close activity panels or unlock the cursor |
+| Space / Right Arrow | Advance through guided movement |
+| Left Arrow | Previous guided movement step |
+| P | Pause or resume guided movement |
+| Esc | Open pause controls or close an activity panel |
 
 ## Project Structure
 
