@@ -1,125 +1,123 @@
 # ACT-FAST: Accessible Care and Training for Stroke Rehabilitation
 
-ACT-FAST is an academic Unity prototype exploring an accessible desktop
-3D environment with optional guided activities, progress feedback, and
-general educational resources.
+ACT-FAST is an academic Unity prototype exploring how interactive 3D environments can support accessible, engaging rehabilitation-inspired activities and stroke education.
 
-Users can explore four activity stations, move and place familiar
-objects, follow self-paced movement instructions, and browse learning
-content.
+The application features a desktop rehabilitation environment with four interactive stations where users can practise object placement, explore everyday activities, follow guided movement instructions, and access educational resources.
 
-> **Note:** The demonstration runs in desktop Play Mode and does not
-> require a VR headset. It is an educational prototype, not a clinical
-> rehabilitation product or personalized medical treatment.
+> **Note:** ACT-FAST is designed to run in desktop Play Mode or as a standalone desktop application. A VR headset is not required for the demonstration. This is an educational prototype, not a clinical rehabilitation product or a substitute for professional medical care.
 
 ## Table of Contents
 
--   [Project Overview](#project-overview)
--   [Features](#features)
--   [Demonstration](#demonstration)
--   [Technologies Used](#technologies-used)
--   [Getting Started](#getting-started)
--   [Controls](#controls)
--   [Project Structure](#project-structure)
--   [Main Scenes](#main-scenes)
--   [Main Scripts](#main-scripts)
--   [Team](#team)
--   [Future Improvements](#future-improvements)
--   [Disclaimer](#disclaimer)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Demonstration](#demonstration)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Controls](#controls)
+- [Project Structure](#project-structure)
+- [Main Scenes](#main-scenes)
+- [Main Scripts](#main-scripts)
+- [Team](#team)
+- [Future Improvements](#future-improvements)
+- [Disclaimer](#disclaimer)
 
 ## Project Overview
 
-Rehabilitation can involve repetitive exercises and activities that
-users may find difficult to engage with consistently. RehabVR aims to
-demonstrate how interactive digital environments can make rehabilitation
-activities more engaging and accessible.
+Rehabilitation and recovery can involve repetitive activities and exercises. ACT-FAST explores how an interactive digital environment can make rehabilitation-inspired activities more engaging while providing an accessible way to explore movement and stroke-related educational content.
 
-The project features a virtual rehabilitation room where users can
-explore their surroundings and interact with different stations.
+The application takes place in a furnished 3D rehabilitation room containing four activity stations:
 
-The prototype includes:
+1. **Reach & Place:** Interact with and place objects in designated areas.
+2. **Guided Movement:** Follow a structured, five-step guided arm movement activity.
+3. **Everyday Activities:** Explore interactions with familiar everyday objects.
+4. **Learning & Resources:** Browse general educational information.
 
--   A main menu for navigating the application.
--   A first-person 3D rehabilitation environment.
--   An interactive object collection activity.
--   A guided arm exercise station.
--   Educational resources accessible throughout the experience.
--   A progress tracking system for interactive activities.
+Users can navigate the environment, interact with activities, track progress, and move between the main menu and rehabilitation room.
 
 ## Features
 
 ### 1. Main Menu
 
-The main menu provides an entry point to the application and allows
-users to:
+The main menu provides the application's starting point and navigation options.
 
--   Start a rehabilitation session.
--   Access educational resources.
--   Exit the application.
+- Start a rehabilitation session.
+- Access educational resources.
+- Exit the application.
 
 ### 2. Interactive Rehabilitation Environment
 
-Users can explore a 3D rehabilitation room through first-person
-controls.
+Users explore a furnished 3D rehabilitation room using first-person desktop controls.
 
 The environment includes:
 
--   A furnished rehabilitation room.
--   Interactive activity stations.
--   Educational resource stations.
--   Navigation and interaction prompts.
+- Four dedicated activity stations.
+- Interactive objects and placement areas.
+- Station labels and interaction prompts.
+- In-game interface elements for navigation and activity feedback.
 
-### 3. Object Collection Activity
+### 3. Reach & Place Activity
 
-Users can participate in a simple object collection activity within the
-rehabilitation environment.
+An interactive object-placement activity designed around simple reaching and placement tasks.
 
--   Locate interactive objects.
--   Interact with objects using the keyboard.
--   Collect objects to increase the activity score.
--   Track progress toward the completion goal.
+- Locate and pick up interactive targets.
+- Carry objects to designated placement areas.
+- Receive feedback when attempting to place objects.
+- Track progress toward the activity's completion goal.
 
-### 4. Guided Arm Exercise
+### 4. Everyday Activities
 
-The arm exercise station provides a structured, five-step guided
-activity.
+An activity station featuring familiar objects, including a block, ball, and cup.
 
--   Approach the exercise station.
--   Open the exercise instructions.
--   Follow the instructions displayed on screen.
--   Advance through the activity using the keyboard.
--   Exit the activity when finished.
+Users can explore and interact with these objects as part of the environment's everyday activity experience.
 
-### 5. Educational Resources
+### 5. Guided Movement
 
-Educational resources are available from both the main menu and the
-rehabilitation environment.
+A structured, five-step guided arm movement activity.
 
-Users can access informational content without leaving the application.
+- Open the guided exercise instructions.
+- Follow the instructions displayed on screen.
+- Navigate between steps.
+- Pause and resume the activity.
+- Review previous steps and restart when needed.
+- Receive completion feedback.
+
+### 6. Learning & Resources
+
+Educational content is available through the main menu and the rehabilitation room.
+
+Users can browse informational resources without leaving the application.
+
+### 7. Accessible Interface and Navigation
+
+The application includes a consistent interface for menus, activity instructions, progress feedback, and navigation.
+
+Keyboard and mouse controls allow users to explore the environment and interact with its activities without requiring VR equipment.
 
 ## Demonstration
 
-The project is demonstrated through a screen-recorded walkthrough of the
-desktop application.
+The project is intended to be demonstrated through a desktop application walkthrough.
 
-The demonstration covers:
+The demonstration can cover:
 
-1.  Navigating the main menu.
-2.  Accessing educational resources.
-3.  Entering the rehabilitation environment.
-4.  Exploring the room using first-person controls.
-5.  Completing the object collection activity.
-6.  Interacting with the guided arm exercise station.
-7.  Accessing educational resources within the room.
-8.  Returning to the main menu.
+1. Navigating the main menu.
+2. Accessing educational resources.
+3. Starting a rehabilitation session.
+4. Exploring the rehabilitation room.
+5. Visiting the Reach & Place station and completing placement tasks.
+6. Exploring the Everyday Activities station.
+7. Following the Guided Movement activity.
+8. Browsing resources within the rehabilitation room.
+9. Using the pause and navigation controls.
+10. Returning to the main menu.
 
 ## Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| Unity | 3D environment and application development |
-| C# | Application logic and interaction scripts |
+| Unity 6 | 3D environment and application development |
+| C# | Application logic, activities, and interactions |
 | Unity UI System | Menus, instructions, and interface elements |
+| XR Interaction Toolkit | XR-related Unity project components and tooling |
 | Git | Version control |
 | GitHub | Source code management and collaboration |
 
@@ -129,48 +127,49 @@ The demonstration covers:
 
 Before running the project, ensure you have:
 
--   [Unity Hub](https://unity.com/)
--   A compatible Unity Editor version
--   Windows operating system (for the standalone build)
+- [Unity Hub](https://unity.com/)
+- Unity 6, using a compatible editor version
+- Git (for cloning the repository)
+- Windows operating system (for the intended desktop demonstration)
 
 ### Clone the Repository
 
 Clone the project using Git:
 
-``` bash
+```bash
 git clone https://github.com/fayy-lee/CSI4104_Group7.git
 ```
 
 Navigate to the project directory:
 
-``` bash
+```bash
 cd CSI4104_Group7
 ```
 
 ### Open the Project in Unity
 
-1.  Open Unity Hub.
-2.  Select **Add Project**.
-3.  Navigate to the cloned repository.
-4.  Select the project folder.
-5.  Open the project using a compatible Unity Editor version.
-6.  Navigate to `Assets/Scenes`.
-7.  Open the `MainMenu` scene.
-8.  Press **Play** to launch the application.
+1. Open Unity Hub.
+2. Select **Add Project**.
+3. Navigate to the cloned repository.
+4. Select the project folder.
+5. Open it using a compatible Unity Editor version.
+6. Navigate to `Assets/Scenes`.
+7. Open the `MainMenu` scene.
+8. Press **Play** to launch the application.
 
 ### Running a Standalone Build
 
-To run the application without opening the Unity Editor:
+To run ACT-FAST without opening the Unity Editor:
 
-1.  Open the project in Unity.
-2.  Navigate to **File → Build Profiles**.
-3.  Select the Windows build platform.
-4.  Ensure the following scenes are included in the build:
-    -   `MainMenu`
-    -   `RehabilitationRoom`
-5.  Select **Build**.
-6.  Choose an output directory.
-7.  Open the generated executable to launch ACT-FAST.
+1. Open the project in Unity.
+2. Navigate to **File → Build Profiles**.
+3. Select the Windows build platform.
+4. Ensure both scenes are included and enabled:
+   - `MainMenu`
+   - `RehabilitationRoom`
+5. Select **Build**.
+6. Choose an output directory.
+7. Open the generated executable to launch ACT-FAST.
 
 ## Controls
 
@@ -180,11 +179,11 @@ To run the application without opening the Unity Editor:
 | A | Move left |
 | S | Move backward |
 | D | Move right |
-| Mouse (locked) | Look around |
+| Mouse | Look around when the pointer is locked |
 | Tab | Toggle pointer lock for menu interaction |
 | E | Interact with objects and activity stations |
 | Space / Right Arrow | Advance through guided movement |
-| Left Arrow | Previous guided movement step |
+| Left Arrow | Return to the previous guided movement step |
 | P | Pause or resume guided movement |
 | Esc | Open pause controls or close an activity panel |
 
@@ -192,7 +191,7 @@ To run the application without opening the Unity Editor:
 
 The Unity project is organized into the following directories:
 
-``` text
+```text
 CSI4104_Group7/
 │
 ├── Assets/
@@ -200,9 +199,10 @@ CSI4104_Group7/
 │   ├── Materials/
 │   ├── Models/
 │   ├── Prefabs/
+│   ├── Samples/
 │   ├── Scenes/
-│   │   ├── MainMenu
-│   │   └── RehabilitationRoom
+│   │   ├── MainMenu.unity
+│   │   └── RehabilitationRoom.unity
 │   ├── Scripts/
 │   └── UI/
 │
@@ -214,66 +214,48 @@ CSI4104_Group7/
 
 ## Main Scenes
 
-  Scene                  Description
-  ---------------------- ---------------------------------------------
-  `MainMenu`             Application landing page and navigation
-  `RehabilitationRoom`   Main interactive rehabilitation environment
+| Scene | Description |
+|---|---|
+| `MainMenu` | Application landing page, navigation, and access to educational resources |
+| `RehabilitationRoom` | Main interactive environment containing the four activity stations |
 
 ## Main Scripts
 
-The application uses C# scripts to manage navigation, player movement,
-interactions, and activities.
+The application uses C# scripts to manage navigation, player movement, interactions, activities, and interface elements.
 
-  -----------------------------------------------------------------------
-  Script                              Responsibility
-  ----------------------------------- -----------------------------------
-  `MainMenuManager.cs`                Handles main menu navigation and
-                                      educational resources
-
-  `PlayerController.cs`               Manages first-person player
-                                      movement and camera controls
-
-  `PlayerInteraction.cs`              Handles interactions with objects
-                                      and activity stations
-
-  `RoomUIManager.cs`                  Manages in-game UI and navigation
-                                      back to the main menu
-
-  `ArmExerciseManager.cs`             Controls the guided arm exercise
-                                      activity
-
-  `ResourceStationManager.cs`         Manages educational resources
-                                      within the rehabilitation room
-
-  `WelcomeManager.cs`                 Handles the welcome message when
-                                      entering the environment
-  -----------------------------------------------------------------------
+| Script | Responsibility |
+|---|---|
+| `MainMenuManager.cs` | Handles main menu navigation and educational resources |
+| `PlayerController.cs` | Manages first-person movement and camera controls |
+| `PlayerInteraction.cs` | Handles interactions with objects, targets, and placement areas |
+| `RoomUIManager.cs` | Manages in-game interface elements and navigation |
+| `ArmExerciseManager.cs` | Controls the guided arm movement activity |
+| `ResourceStationManager.cs` | Manages educational resources within the rehabilitation room |
+| `WelcomeManager.cs` | Handles the welcome message when entering the environment |
+| `AccessibleUIFactory.cs` | Provides shared interface creation and styling components |
 
 ## Team
 
 Developed by:
 
--   Lacia Cummings
--   Sanika Sisodia
--   Fay Lee
+- Lacia Cummings
+- Sanika Sisodia
+- Fay Lee
 
-**University of Ottawa**
-CSI4104 - VR Project
+**University of Ottawa**  
+CSI4104 - Software Engineering Project
 
 ## Future Improvements
 
 Potential future enhancements include:
 
--   Integration with VR headsets and motion controllers.
--   Additional rehabilitation activities and interactive exercises.
--   More extensive progress tracking.
--   Customizable accessibility settings.
--   Expanded educational resources.
--   Improved environmental interaction and feedback.
+- Additional rehabilitation-inspired activities and interactive exercises.
+- Expanded educational resources.
+- More detailed activity progress tracking.
+- Further accessibility and interface customization options.
+- Enhanced environmental interactions and feedback.
+- Optional VR headset and motion controller support.
 
 ## Disclaimer
 
-RehabVR is an academic software prototype developed to demonstrate
-interactive rehabilitation concepts. It is intended for educational and
-demonstration purposes only and is not a substitute for professional
-medical advice, assessment, or rehabilitation treatment.
+ACT-FAST is an academic software prototype developed to explore interactive rehabilitation concepts and stroke education. It is intended for educational and demonstration purposes only. It is not a clinical rehabilitation product, does not provide personalized medical guidance, and is not a substitute for professional medical advice, assessment, or rehabilitation treatment.
